@@ -10,26 +10,25 @@ const Home = () => {
 
   const getTopRatedMovies = async () => {
     const res = await fetch(
-      `https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}`
+      `${movies}top_rated?api_key=${API_KEY}`
     );
     const data = await res.json();
     setTopMovies(data.results);
   };
 
   useEffect(() => {
-    const topRatedUrl = `${movies}top_rated?${API_KEY}`;
-    getTopRatedMovies(topRatedUrl);
+    getTopRatedMovies();
   }, []);
 
   return (
-  <div className="container">
-    <h2 className="title">Melhores filmes:</h2>
-    <div className="movies-container">
-        {/* {topMovies.length === 0 && <p>A carregar...</p>} */}
-{/*         {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)} */}
+    <div className="container">
+      <h2 className="title">Melhores filmes:</h2>
+      <div className="movies-container">
+        {topMovies.length === 0 && <p>A carregar...</p>}
+        {topMovies.length > 0 && topMovies.map((movie) => <MovieCard key={movie.id} movie={movie}/>)}
+      </div>
     </div>
-</div>
-);
+  );
 };
 
 export default Home;

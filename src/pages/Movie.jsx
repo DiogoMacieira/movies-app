@@ -6,7 +6,7 @@ import {
   BsHourglassSplit,
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
-import { API_KEY, movies, search } from "../services/api";
+import { API_KEY, movies } from "../services/api";
 import MovieCard from "../components/MovieCard";
 import "./Movie.css";
 

@@ -17,5 +17,4 @@ export function ThemeProvider(props) {
 }
 
 export function useTheme() {
-  return useContext(ThemeContext);
-}
+  return useContext(ThemeContext);}

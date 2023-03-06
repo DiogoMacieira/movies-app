@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import MovieCard from "../components/MovieCard";
 import { API_KEY } from "../services/api";
 import { movies } from "../services/api"; 
-
 import "./MoviesGrid.css";
 
 const Home = () => {
@@ -32,3 +31,4 @@ const Home = () => {
 };
 
 export default Home;
+

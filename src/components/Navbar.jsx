@@ -1,7 +1,7 @@
 import {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BiCameraMovie, BiSearchAlt2} from "react-icons/bi";
-import { ThemeSwitcher } from "./ThemeContext";
+import { ThemeSwitcher } from "./ThemeComponents";
 import "./Navbar.css";
 
 const Navbar = () => {

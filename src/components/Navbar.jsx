@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 import "./Navbar.css";
-import React, { useContext } from "react";
-import ThemeContext from "../contexts/ThemeContext";
+import React from "react";
+
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-  const { theme, toggleTheme } = useContext(ThemeContext);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,14 +20,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="navbar" className={theme}>
+    <nav id="navbar" >
       <h2>
         <Link to="/">
           <BiCameraMovie />
           Movies App
         </Link>
       </h2>
-      <button onClick={toggleTheme}>Switch Theme</button>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

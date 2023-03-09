@@ -17,6 +17,7 @@ const Navbar = () => {
     navigate(`/search?q=${search}`);
     setSearch("");
   };
+
   return (
     <nav id="navbar" >
       <h2>

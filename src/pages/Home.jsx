@@ -3,10 +3,12 @@ import MovieCard from "../components/MovieCard";
 import { API_KEY } from "../services/api";
 import { movies } from "../services/api"; 
 import "./MoviesGrid.css";
+import React from "react";
+
 
 const Home = () => {
-  const [topMovies, setTopMovies] = useState([]);
 
+  const [topMovies, setTopMovies] = useState([]);
   const getTopRatedMovies = async () => {
     const res = await fetch(
       `${movies}top_rated?api_key=${API_KEY}`

@@ -1,29 +1,29 @@
-import React, { useState,useEffect } from "react";
-import { Outlet } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import {Outlet} from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 import ThemeContext from "./contexts/ThemeContext";
 
 const GlobalStyles = createGlobalStyle`
     body{
-      background-color:${props => props.darkMode ? "#000":"#cccccc"};
+      background-color:${(props) => (props.darkMode ? "#000" : "#cccccc")};
     }
     .container .title {
-    color: ${props => props.darkMode ? "#fff":"#000"};
+    color: ${(props) => (props.darkMode ? "#fff" : "#000")};
 }
     .movies-container div{
-      background-color:${props => props.darkMode ? "#cccccc":"#000"};
-      color: ${props => props.darkMode ? "#000":"#cccccc"};
+      background-color:${(props) => (props.darkMode ? "#cccccc" : "#000")};
+      color: ${(props) => (props.darkMode ? "#000" : "#cccccc")};
     }
     .movie-page{
-      background-color:${props => props.darkMode ? "#cccccc":"#000"};
-      color: ${props => props.darkMode ? "#000":"#fff"};
+      background-color:${(props) => (props.darkMode ? "#cccccc" : "#000")};
+      color: ${(props) => (props.darkMode ? "#000" : "#fff")};
     }
-`
+`;
 
 function App() {
-      const [darkMode,setDarkMode] = useState(false)
-        useEffect(() => {
+  const [darkMode, setDarkMode] = useState(false);
+  useEffect(() => {
     const isDarkModeEnabled = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkModeEnabled);
   }, []);
@@ -32,14 +32,13 @@ function App() {
     localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
   return (
-    <ThemeContext.Provider value={{darkMode,setDarkMode}}>
-      <div className='App'>
-          <GlobalStyles darkMode={darkMode}/>
-        <Navbar/>
-        <Outlet/>
+      <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+        <div className="App">
+          <GlobalStyles darkMode={darkMode} />
+          <Navbar />
+          <Outlet />
         </div>
-        </ThemeContext.Provider>
-
+      </ThemeContext.Provider>
   );
 }
 export default App;

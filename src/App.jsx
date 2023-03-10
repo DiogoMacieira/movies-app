@@ -36,7 +36,7 @@ function App() {
         <div className="App">
           <GlobalStyles darkMode={darkMode} />
           <Navbar />
-          <Outlet />
+          <Outlet />{/* representa todos os filhos do children das rotas */}
         </div>
       </ThemeContext.Provider>
   );

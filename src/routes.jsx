@@ -6,31 +6,32 @@ import Home from "./pages/Home";
 import Movie from "./pages/Movie";
 import Search from "./pages/Search";
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "/movie/:id",
-        element: <Movie />,
-      },
-      {
-        path: "/search",
-        element: <Search />,
-      },
-      // {
-      //   path: "*",
-      //   element: <NotFound />,
-      // },
-    ],
-  },
-],    
+export const router = createBrowserRouter(
+  [
     {
-      basename: "/movies-app",
-    })
-
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "/movie/:id",
+          element: <Movie />,
+        },
+        {
+          path: "/search",
+          element: <Search />,
+        },
+        // {
+        //   path: "*",
+        //   element: <NotFound />,
+        // },
+      ],
+    },
+  ],
+  {
+    basename: "/movies-app",
+  }
+);

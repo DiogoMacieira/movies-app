@@ -2,7 +2,7 @@
   "name": "movies-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://diogomacieira.github.io/movies-app/",
+  "homepage":"https://diogomacieira.github.io/movies-app",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

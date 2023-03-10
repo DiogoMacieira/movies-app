@@ -13,11 +13,11 @@ const GlobalStyles = createGlobalStyle`
 }
     .movies-container div{
       background-color:${(props) => (props.darkMode ? "#404040" : "#000")};
-      color: ${(props) => (props.darkMode ? "#fff" : "#000")};
+      color: ${(props) => (props.darkMode ? "#fff" : "#fff")};
     }
     .movie-page{
       background-color:${(props) => (props.darkMode ? "#404040" : "#000")};
-      color: ${(props) => (props.darkMode ? "#000" : "#fff")};
+      color: ${(props) => (props.darkMode ? "#fff" : "#fff")};
     }
 `;
 

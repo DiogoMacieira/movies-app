@@ -17,6 +17,10 @@
     text-align: center;
 }
 
+.movie-page .movie-card img{
+    padding-top:50px ;
+}
+
 .movie-page .movie-card img,
 .movie-page .movie-card h2,
 .movie-page .movie-card p {

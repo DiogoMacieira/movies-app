@@ -17,11 +17,11 @@ root.render(
           <Route path="movie/:id" element={<Movie />} />
           <Route path="search" element={<Search />} />
         </Route>
-        ,
+      </Routes>
+    </BrowserRouter>
+            ,
         {{
           basename: "/movies-app",
         }}
-      </Routes>
-    </BrowserRouter>
   </React.StrictMode>
 );
